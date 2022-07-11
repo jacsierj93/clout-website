@@ -71,13 +71,13 @@ const MedioDeLaInfluencia: NextPage = () => {
               <Image src={logoFooter}/>
             </div>
             <div style={{'marginTop':'25px'}}>
-                <span style={{'fontWeight':'500','fontSize':'13px','letterSpacing':'20px','letterSpacing':'0.4em','textTransform':'uppercase'}}>
+                <span style={{'fontWeight':'500','fontSize':'13px','lineHeight':'20px','letterSpacing':'0.4em','textTransform':'uppercase'}}>
                   latinoamerica
                 </span>
             </div>
             <div style={{'marginTop':'80px', 'display':'flex','flexDirection':'row'}}>
                <div style={{flex:'1','margin':'auto'}}>
-                <span style={{'fontWeight':'700','fontSize':'16px','letterSpacing':'24px','letterSpacing':'0.1em','textTransform':'uppercase'}}>
+                <span style={{'fontWeight':'700','fontSize':'16px','lineHeight':'24px','letterSpacing':'0.1em','textTransform':'uppercase'}}>
                   SíGANOS
                   </span>
                </div>
