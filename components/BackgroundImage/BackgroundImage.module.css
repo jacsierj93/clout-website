@@ -1,0 +1,11 @@
+.bgWrap {
+    position: absolute;
+    height: 100vh;
+    width: 100%;
+    top:0;
+    left:0;
+    overflow: hidden;
+    z-index: -1;
+    background-color: #F5EEE2;
+    padding: 200px 0 200px 124px;
+  }
