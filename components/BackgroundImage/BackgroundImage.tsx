@@ -8,8 +8,7 @@ interface Props {
   style: Object
 }
 
-const BackgroundImage: NextComponentType<Props> = (props) => {
-  const {style} = props
+const BackgroundImage= ({style}: Props) => {
     return (
         <div className={styles.bgWrap} style={style}>
           <Image src={fondo} layout="responsive"/>
