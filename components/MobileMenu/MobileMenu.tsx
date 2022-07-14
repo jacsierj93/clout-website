@@ -20,7 +20,7 @@ const  MobileMenu = ({dark}:Props) => {
             <nav style={{'width':'100%', display:'flex', 'flexDirection': 'row', justifyContent:'space-between', 'padding':'0 16px'}}>
                 <div style={{zIndex:'3', marginTop: 'auto'}}>
                     <Link href="/">
-                        <Image src={(!dark)?logo:logoDark}/>
+                        <Image src={(!dark || isOpen)?logo:logoDark}/>
                     </Link>
                 </div>
                 <div className={style['menu-wrapper']} style={{zIndex:'3'}}>
