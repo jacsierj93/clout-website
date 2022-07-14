@@ -6,6 +6,7 @@ import style from './MobileMenu.module.css'
 
 import twitter from '../../assets/images/tw-yellow.svg'
 import instagram from '../../assets/images/ig-yellow.svg'
+import Link from 'next/link'
 
 const  MobileMenu = () => {
     const [isOpen, setOpen] = useState(false)
@@ -14,10 +15,12 @@ const  MobileMenu = () => {
         <div>
             <nav style={{'width':'100%', display:'flex', 'flexDirection': 'row', justifyContent:'space-between', 'padding':'0 16px'}}>
                 <div style={{zIndex:'3', marginTop: 'auto'}}>
-                    <Image src={logo}/>
+                    <Link href="/">
+                        <Image src={logo}/>
+                    </Link>
                 </div>
                 <div className={style['menu-wrapper']} style={{zIndex:'3'}}>
-                    <Hamburger toggled={isOpen} toggle={setOpen} hideOutline={false} rounded/>
+                    <Hamburger size={24} toggled={isOpen} toggle={setOpen} hideOutline={true} rounded/>
                 </div>
             </nav>
             {
@@ -28,7 +31,9 @@ const  MobileMenu = () => {
                         </div>
                         <div style={{display:'flex', flex:"2", flexDirection:'column'}}>
                             <div className={style['menu-mobile-items']}>
-                                <a>El medio de la influencia</a>
+                                <Link href="/medio-de-la-influencia">
+                                    <a>El medio de la influencia</a>
+                                </Link>
                             </div>
                             <div className={style['menu-mobile-items']}>
                                 <a>Nuestra historia</a>

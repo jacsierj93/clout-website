@@ -1,9 +1,12 @@
 import type { NextPage } from 'next'
+import { useRef } from 'react'
+import scrollToComponent from 'react-scroll-to-component-ssr';
 import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import VideoBackground from '../components/VideoBackground/VideoBackground'
 import MobileMenu from '../components/MobileMenu/MobileMenu'
+import Marquee from "react-fast-marquee";
 
 import arrowDown from '../assets/images/down.svg'
 import arrowYellowUp from '../assets/images/arrow_yellow_up.svg'
@@ -21,6 +24,13 @@ import igBlack from '../assets/images/ig-black.svg'
 import lnBlack from '../assets/images/ln-black.svg'
 
 const Home: NextPage = () => {
+
+  const scrollToRef = useRef(null);
+
+  const scrollTo = () => {
+    scrollToComponent(scrollToRef.current,{align:'top'})
+  }
+
   return (
     <div className={styles.container}>
       <Head>
@@ -38,13 +48,13 @@ const Home: NextPage = () => {
             para agencias  <br/>
             y anunciantes.
             </h1>
-            <div style={{marginTop:'80px'}}>
+            <div style={{marginTop:'80px'}} onClick={scrollTo}>
               <Image src={arrowDown}/>
             </div>
           </div>
           <VideoBackground/>
         </div>
-        <div className={styles['second-section']}>
+        <div ref={scrollToRef} className={styles['second-section']}>
           <div style={{paddingLeft:'16px'}}>
             <Image src={arrowYellowUp}/>
           </div>
@@ -73,9 +83,10 @@ const Home: NextPage = () => {
             <Image src={arrowYellowDown}/>
           </div>
 
-          <div style={{'height':'44px', 'marginTop':'40px', 'backgroundColor':'#FFC62F'}}>
-
-          </div>
+          <Marquee gradient={false} style={{'height':'44px', 'marginTop':'40px', 'backgroundColor':'#FFC62F'}}>
+          <span style={{'color':'#666666', 'fontWeight':'500', 'fontSize':'17px', 'lineHeight':'28px', 'letterSpacing':'0.4em'}}>En el 2020 la publicidad digital</span>
+          <div style={{width:'25vw'}}></div>
+          </Marquee>
 
           <div style={{padding: '0 49px', marginTop:'16px', display:'flex', flexDirection:'column' }}>
             <div>
@@ -139,7 +150,7 @@ adaptadas al real time.</h3>
         </div>
       </main>
 
-      <footer className={styles.foot} style={{'paddingTop': '255px',paddingBottom:'60px'}}>
+      <footer className={styles.foot} style={{'paddingTop': '200px',paddingBottom:'60px'}}>
 
             <div>
               <Image src={logoFooter}/>

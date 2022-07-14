@@ -3,14 +3,23 @@ import Head from 'next/head'
 import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import modulo from '../styles/influencia.module.css'
-import Background1 from '../components/BackgroundImage/BackgroundImage'
+import BackgroundImage from '../components/BackgroundImage/BackgroundImage'
 import MobileMenu from '../components/MobileMenu/MobileMenu'
+
+import fondo1 from '../assets/images/Illo.svg'
+import fondo2 from '../assets/images/background2.png'
+import iconos from '../assets/images/icons.svg'
+import global from '../assets/images/global.svg'
+import bgYellow from '../assets/images/bg.png'
+
+import fondoPhone from '../assets/images/phone_section.jpg'
 
 import arrowDown from '../assets/images/down.svg'
 import arrowYellowUp from '../assets/images/arrow_yellow_up.svg'
 import arrowYellowDown from '../assets/images/arrow_yellow_down.svg'
 import foto from '../assets/images/foto.jpg'
 import foto2 from '../assets/images/foto2.jpg'
+import psicologiaSocial from '../assets/images/psicologia_social.jpg'
 
 import news1 from '../assets/noticias/news1.png'
 import news2 from '../assets/noticias/news2.jpg'
@@ -59,9 +68,87 @@ const MedioDeLaInfluencia: NextPage = () => {
             </div>
           </div>
             
-          <Background1 style={{'height':'calc(100vh + 70px)'}}/>
+          <BackgroundImage src={fondo1}/>
         </div>
-       
+        <div className={modulo['second-section']}>
+            <div className={[modulo.bgImage,modulo['padding-default']].join(' ')} style={{'flex':'1','backgroundImage':'url('+fondo2.src+')','display':'flex','maxHeight':'50vh','justifyContent':'end','flexDirection':'column'}}>
+                <span style={{'fontWeight':'700','fontSize':'30px','lineHeight':'40px', 'letterSpacing':'0.03em','color':'white'}}>
+                Entérese qué se 
+                está hablando en 
+                el mundo del influencer 
+                marketing
+                </span>
+            </div>
+            <div className={[modulo.divGradient,modulo['padding-default']].join(' ')} style={{'flex':'1','maxHeight':'50vh','display':'flex','justifyContent':'start','flexDirection':'column'}}>
+              <span style={{'fontWeight':'700','fontSize':'30px','lineHeight':'40px', 'letterSpacing':'0.03em'}}>
+                  las personas
+                  </span>
+              <div style={{'paddingTop':'40px'}}>
+                <span style={{'fontWeight':'400','fontSize':'20px','lineHeight':'28px','letterSpacing':'-0.02em'}}>
+                Una persona recibe miles de estímulos sociales semanalmente con los cuales va adaptando
+                sus imaginarios de vida, conductas y comportamientos 
+                de consumo.
+                </span>
+              </div>
+            </div>
+        </div>
+        <div className={[modulo['third-section'],modulo['padding-default'], modulo.bgImage].join(' ')} style={{'paddingTop':'16px','paddingBottom':'16px','backgroundImage':'url('+fondoPhone.src+')','backgroundColor':'#f6eee3','backgroundPositionY':'center'}}>
+            <div className={modulo.bgImage} style={{'backgroundImage':'url('+iconos.src+')','flex':'1'}}>
+
+            </div>
+        </div>
+        <div className={modulo['fourth-section']} style={{'paddingTop':'16px','paddingBottom':'16px','backgroundColor':'#000'}}>
+            <div className={[modulo.bgImage,modulo['padding-default']].join(' ')} style={{'backgroundImage':'url('+global.src+')','flex':'1', 'backgroundPosition':'center','display':'flex','flexDirection':'column'}}>
+              <div className={modulo['padding-default']} style={{'textAlign':'center','paddingTop':'40px'}}>
+                <span style={{'fontWeight':'700','fontSize':'35px','lineHeight':'52px','color':'#FFC62F','letterSpacing':'-0.02em'}}>
+                La influencia digital 
+                </span>
+                <br/>
+                <span style={{'fontWeight':'400','fontSize':'18px','lineHeight':'27px','color':'#FFF','letterSpacing':'-0.02em'}}>
+                es un medio con millones de canales: 			 
+                </span>
+              </div>
+              <div style={{'flex':'1', 'paddingLeft':'20px', 'justifyContent':'center','display':'flex','flexDirection':'column'}}>
+                <span style={{'fontWeight':'700','fontSize':'75px','lineHeight':'112px','color':'#FFC62F','letterSpacing':'-0.02em'}}>
+                  LA GENTE	 
+                  </span>
+              </div>
+              <div className={modulo['padding-default']} style={{'textAlign':'center','paddingBottom':'40px'}}>
+                
+                <span style={{'fontWeight':'400','fontSize':'18px','lineHeight':'27px','color':'#FFF','letterSpacing':'-0.02em'}}>
+                La clave está en entenderlo como un sistema de estímulos sociales que pueden transformar a una audiencia. 		 
+                </span>
+              </div>
+            </div>
+        </div>
+        <div className={[modulo['fifth-section'], modulo.bgImage].join(' ')} style={{'paddingTop':'16px','paddingBottom':'16px','backgroundImage':'url('+bgYellow.src+')','backgroundPositionX':'right'}}>
+            <div className={modulo['padding-default']} style={{'paddingTop':'36px'}}>
+              <span style={{'fontWeight':'700','fontSize':'35px','lineHeight':'36px','letterSpacing':'-0.02em'}}>
+              En Clout aplicamos <br/>
+              la psicología social 		 
+                </span>
+              <br/>
+              <span style={{'fontWeight':'400','fontSize':'18px','lineHeight':'27px','letterSpacing':'-0.02em','display':'inline-block','paddingRight':'26%','paddingTop':'24px'}}>
+                La clave está en entenderlo como un sistema de estímulos sociales que pueden transformar a una audiencia. 		 
+                </span>
+            </div>
+            <div style={{'marginTop':'16px'}}>
+              <Image src={psicologiaSocial} layout='responsive'/>
+            </div>
+            <div className={modulo['padding-default']} style={{'paddingTop':'32px'}}>
+            
+              <span style={{'fontWeight':'400','fontSize':'18px','lineHeight':'27px','letterSpacing':'-0.02em','display':'inline-block','paddingRight':'26%','paddingTop':'24px'}}>
+              El medio de la influencia digital es el único con capacidad de crear conversación, popularidad, reconocimiento y autoridad desde múltiples puntos 
+de contacto.
+                </span>
+            </div>
+            <div className={modulo['padding-default']} style={{'paddingTop':'32px','paddingBottom':'40px'}}>
+            
+              <button>
+                Conocer más
+              </button>
+            </div>
+        </div>
 
       </main>
 

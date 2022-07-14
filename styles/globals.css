@@ -13,6 +13,7 @@ a {
 
 * {
   box-sizing: border-box;
+  -webkit-tap-highlight-color: transparent;
 }
 
 h1{
@@ -64,4 +65,20 @@ line-height: 31px;
 letter-spacing: 0.02em;
 
 color: #000000;
+}
+
+.flex-column{
+  display: flex;
+}
+
+button{
+  font-weight: 500;
+  font-size: 23px;
+  line-height: 33px;
+  /* identical to box height, or 143% */
+  letter-spacing: -0.02em;
+  color: #FFFFFF;
+  padding: 10px;
+  background-color: #000000;
+  border: none;
 }
