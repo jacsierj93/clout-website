@@ -1,5 +1,6 @@
 import { Twirl as Hamburger } from 'hamburger-react'
 import logo from '../../assets/images/logo.svg'
+import logoDark from '../../assets/images/LogoDark.svg'
 import Image from 'next/image'
 import { useState } from 'react'
 import style from './MobileMenu.module.css'
@@ -8,7 +9,10 @@ import twitter from '../../assets/images/tw-yellow.svg'
 import instagram from '../../assets/images/ig-yellow.svg'
 import Link from 'next/link'
 
-const  MobileMenu = () => {
+interface Props{
+    'dark' ?: boolean
+}
+const  MobileMenu = ({dark}:Props) => {
     const [isOpen, setOpen] = useState(false)
 
     return (
@@ -16,7 +20,7 @@ const  MobileMenu = () => {
             <nav style={{'width':'100%', display:'flex', 'flexDirection': 'row', justifyContent:'space-between', 'padding':'0 16px'}}>
                 <div style={{zIndex:'3', marginTop: 'auto'}}>
                     <Link href="/">
-                        <Image src={logo}/>
+                        <Image src={(!dark)?logo:logoDark}/>
                     </Link>
                 </div>
                 <div className={style['menu-wrapper']} style={{zIndex:'3'}}>
